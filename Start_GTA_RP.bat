@@ -7,21 +7,22 @@ echo Pour relancer le serveur, Appuyez sur CTRL + C puis "runserver"
 echo -
 echo ---------------------------------------
 echo -
-echo Appuyez sur une touche pour lancer FiveM
+echo Appuyez sur une touche pour lancer FiveM puis lancer le serveur !
 echo -
 pause > nul
-start C:\Users\bbrpr\AppData\Local\FiveM\FiveM.exe
+echo -
 echo Lancement de FiveM en cours ...
 echo -
 echo ---------------------------------------
 echo -
-echo Appuyez une derniere fois sur une touche pour lancer votre serveur !
-echo -
-pause > nul
 echo Bon Game et bon Role Play ... sur OxyCity
-echo -
+start C:\Users\bbrpr\AppData\Local\FiveM\FiveM.exe
 CLS 
 cd K:\Serveur\Nginx\www\GTA_FiveM\Serveur
 cmd /k FXServer.exe +exec server.cfg
+
+
+
+
 
 
