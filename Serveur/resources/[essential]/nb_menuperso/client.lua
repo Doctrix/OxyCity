@@ -253,7 +253,7 @@ function OpenPersonnelMenu()
 	
 					local elements = {}
 					
-					table.insert(elements, {label = 'Téléphone',    							value = 'menuperso_moi_telephone'})
+					--table.insert(elements, {label = 'Téléphone',    							value = 'menuperso_moi_telephone'})
 					table.insert(elements, {label = 'Inventaire',             					value = 'menuperso_moi_inventaire'})
 					table.insert(elements, {label = 'Mes factures',							value = 'menuperso_moi_factures'})
 						
@@ -267,9 +267,9 @@ function OpenPersonnelMenu()
 						},
 						function(data2, menu2)
 
-							if data2.current.value == 'menuperso_moi_telephone' then
+							--[[ if data2.current.value == 'menuperso_moi_telephone' then
 								openTelephone()
-							end
+							end ]]
 
 							if data2.current.value == 'menuperso_moi_inventaire' then
 								openInventaire()
@@ -296,7 +296,7 @@ function OpenPersonnelMenu()
 							align    = 'top-left',
 							elements = {
 								{label = 'Annuler l\'animation',  value = 'menuperso_actions__annuler'},
-								--{label = 'Faire ses besoins [WIP]',     value = 'menuperso_actions_pipi'},
+								{label = 'Faire ses besoins [WIP]',     value = 'menuperso_actions_pipi'},
 								{label = 'Animations de salutations',  value = 'menuperso_actions_Salute'},
 								{label = 'Animations  d\'humeurs',  value = 'menuperso_actions_Humor'},
 								{label = 'Animations de travail',  value = 'menuperso_actions_Travail'},
