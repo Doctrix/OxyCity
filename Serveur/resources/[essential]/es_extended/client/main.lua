@@ -495,3 +495,11 @@ Citizen.CreateThread(function()
 		end
 	end
 end)
+---------------------------------------------------------------------------------------------------------
+--NB : gestion des menu
+---------------------------------------------------------------------------------------------------------
+
+RegisterNetEvent('NB:openMenuInventaire')
+AddEventHandler('NB:openMenuInventaire', function()
+	ESX.ShowInventory()
+end)

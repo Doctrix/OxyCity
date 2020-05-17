@@ -106,7 +106,7 @@ AddEventHandler('playerConnecting', function(name, setKickReason)
 	if not id then
 		setKickReason("Unable to find SteamID, please relaunch FiveM with steam open or restart FiveM & Steam if steam is already open")
 		CancelEvent()
-	end
+	end 
 end)
 
 RegisterServerEvent('es:firstJoinProper')
@@ -114,10 +114,10 @@ AddEventHandler('es:firstJoinProper', function()
 	local Source = source
 	Citizen.CreateThread(function()
 		local id
-		for k,v in ipairs(GetPlayerIdentifiers(Source))do
-			if string.sub(v, 1, string.len(settings.defaultSettings.identifierUsed .. ":")) == (settings.defaultSettings.identifierUsed .. ":") then
+		 for k,v in ipairs(GetPlayerIdentifiers(Source))do
+			--[[ if string.sub(v, 1, string.len(settings.defaultSettings.identifierUsed .. ":")) == (settings.defaultSettings.identifierUsed .. ":") then
 				id = v
-				break
+				break]]
 			end
 		end
 
@@ -127,11 +127,11 @@ AddEventHandler('es:firstJoinProper', function()
 			registerUser(id, Source)
 			justJoined[Source] = false
 	
-		end
+		end 
 
 		return
 	end)
-end) 
+end)  
 
 AddEventHandler('es:setSessionSetting', function(k, v)
 	settings.sessionSettings[k] = v

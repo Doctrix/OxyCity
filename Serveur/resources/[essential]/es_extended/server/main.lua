@@ -1,6 +1,6 @@
 Citizen.CreateThread(function()
-	SetMapName('Oxy Métropole')
-	SetGameType('Réelplay')
+	SetMapName('San Andreas')
+	SetGameType('Roleplay')
 	local resourcesStopped, isAceGranted = {}, false
 
 	for resourceName,reason in pairs(Config.IncompatibleResourcesToStop) do

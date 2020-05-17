@@ -8,7 +8,7 @@ ESX.StartPayCheck = function()
 			local salary  = xPlayer.job.grade_salary
 
 			if salary > 0 then
-				if job == 'chomeurs' then -- chômeurs
+				if job == 'unemployed' then -- unemployed
 					xPlayer.addAccountMoney('bank', salary)
 					TriggerClientEvent('esx:showAdvancedNotification', xPlayer.source, _U('bank'), _U('received_paycheck'), _U('received_help', salary), 'CHAR_BANK_MAZE', 9)
 				elseif Config.EnableSocietyPayouts then -- possibly a society
