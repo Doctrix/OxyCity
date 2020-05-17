@@ -90,13 +90,13 @@ AddEventHandler("es:addGroup", function(group, inherit, aceGroup)
 	if(type(aceGroup) ~= "string") then aceGroup = "user" end
 
 	if(type(group) ~= "string")then
-		log('ES_ERROR: There seems to be an issue while creating a new group, please make sure that you entered a correct "group" as "string"')
-		print('ES_ERROR: There seems to be an issue while creating a new group, please make sure that you entered a correct "group" as "string"')
+		log('ES_ERROR: Il semble y avoir un problème lors de la création d\'un nouveau groupe, veuillez vous assurer que vous avez entré un groupe "group" correct comme chaine "string"')
+		print('ES_ERROR: Il semble y avoir un problème lors de la création d\'un nouveau groupe, veuillez vous assurer que vous avez entré un groupe "group" correct comme chaine "string"')
 	end
 
 	if(type(inherit) ~= "string")then
-		log('ES_ERROR: There seems to be an issue while creating a new group, please make sure that you entered a correct "inherit" as "string"')
-		print('ES_ERROR: There seems to be an issue while creating a new group, please make sure that you entered a correct "inherit" as "string"')
+		log('ES_ERROR: Il semble y avoir un problème lors de la création d\'un nouveau groupe, veuillez vous assurer que vous avez entré un héritage "inherit" correct comme chaine "string".')
+		print('ES_ERROR: Il semble y avoir un problème lors de la création d\'un nouveau groupe, veuillez vous assurer que vous avez entré un héritage "inherit" correct comme chaine "string".')
 	end
 
 	ExecuteCommand('add_principal group.' .. group .. ' group.' .. inherit)

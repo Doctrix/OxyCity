@@ -11,14 +11,14 @@ settings.defaultSettings = {
 	['startingCash'] = GetConvar('es_startingCash', '150'),
 	['startingBank'] = GetConvar('es_startingBank', '452'),
 	['enableRankDecorators'] = GetConvar('es_enableRankDecorators', 'false'),
-	['moneyIcon'] = GetConvar('es_moneyIcon', '$'),
+	['moneyIcon'] = GetConvar('es_moneyIcon', '€'),
 	['nativeMoneySystem'] = GetConvar('es_nativeMoneySystem', '0'),
 	['commandDelimeter'] = GetConvar('es_commandDelimeter', '/'),
 	['enableLogging'] = GetConvar('es_enableLogging', 'false'),
 	['enableCustomData'] = GetConvar('es_enableCustomData', 'false'),
 	['defaultDatabase'] = GetConvar('es_defaultDatabase', '0'),
 	['disableCommandHandler'] = GetConvar('es_disableCommandHandler', 'false'),
-	--[[ ['identifierUsed'] = GetConvar('es_identifierUsed', 'steam'), ]]
+	--[[ ['identifierUsed'] = GetConvar('es_identifierUsed', 'none'),  ]]
 	['sendPosition'] = GetConvar('es_send_position', '1')
 }
 settings.sessionSettings = {}

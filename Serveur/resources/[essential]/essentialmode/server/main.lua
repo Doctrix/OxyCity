@@ -93,7 +93,7 @@ end)
 
 local justJoined = {}
 
---[[ RegisterServerEvent('playerConnecting')
+ RegisterServerEvent('playerConnecting')
 AddEventHandler('playerConnecting', function(name, setKickReason)
 	local id
 	for k,v in ipairs(GetPlayerIdentifiers(source))do
@@ -125,13 +125,13 @@ AddEventHandler('es:firstJoinProper', function()
 			DropPlayer(Source, "SteamID not found, please try reconnecting with Steam open.")
 		else
 			registerUser(id, Source)
-			justJoined[Source] = true
+			justJoined[Source] = false
 	
 		end
 
 		return
 	end)
-end) ]]
+end) 
 
 AddEventHandler('es:setSessionSetting', function(k, v)
 	settings.sessionSettings[k] = v

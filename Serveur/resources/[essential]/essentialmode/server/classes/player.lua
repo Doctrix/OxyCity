@@ -48,8 +48,8 @@ function CreatePlayer(source, permission_level, money, bank, identifier, license
 				TriggerClientEvent('es:activateMoney', self.source , self.money)
 			end
 		else
-			log('ES_ERROR: There seems to be an issue while setting money, something else then a number was entered.')
-			print('ES_ERROR: There seems to be an issue while setting money, something else then a number was entered.')
+			log('ES_ERROR: Il semble y avoir un problème lors de la fixation de l\'argent, autre chose qu\'un numéro a été saisi.')
+			print('ES_ERROR: Il semble y avoir un problème lors de la fixation de l\'argent, autre chose qu\'un numéro a été saisi.')
 		end
 	end
 	
