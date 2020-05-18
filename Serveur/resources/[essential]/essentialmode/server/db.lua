@@ -33,27 +33,27 @@ function db.firstRunCheck()
 		PerformHttpRequest("http://" .. ip .. ":" .. port .. "/essentialmode", function(err, rText, headers)
 			if err == 0 then
 				print(_Prefix .. "-------------------------------------------------------------")
-				print(_Prefix .. "--- No errors detected, essentialmode is setup properly. ---")
+				print(_Prefix .. "--- Aucune erreur détectée, le mode essentiel est correctement configuré. ---")
 				print(_Prefix .. "-------------------------------------------------------------")
 			elseif err == 412 then
 				print(_Prefix .. "-------------------------------------------------------------")
-				print(_Prefix .. "--- No errors detected, essentialmode is setup properly. ---")
+				print(_Prefix .. "--- Aucune erreur détectée, le mode essentiel est correctement configuré. ---")
 				print(_Prefix .. "-------------------------------------------------------------")
 			elseif err == 401 then
 				print(_PrefixError .. "------------------------------------------------------------------------------------------------")
-				print(_PrefixError .. "--- Error detected in authentication, please take a look at your convars for essentialmode. ---")
+				print(_PrefixError .. "--- Erreur détectée dans l'authentification, veuillez consulter vos convars pour le mode essentiel. ---")
 				print(_PrefixError .. "------------------------------------------------------------------------------------------------")
-				log('== Authentication error with CouchDB ==')
+				log('== Erreur d\'authentification avec CouchDB ==')
 			elseif err == 201 then
 				print(_Prefix .. "-------------------------------------------------------------")
-				print(_Prefix .. "--- No errors detected, essentialmode is setup properly. ---")
+				print(_Prefix .. "--- Aucune erreur détectée, le mode essentiel est correctement configuré. ---")
 				print(_Prefix .. "-------------------------------------------------------------")
-				log('== DB Created ==')			
+				log('== Création de la DB ==')			
 			else
 				print(_PrefixError .. "------------------------------------------------------------------------------------------------")
-				print(_PrefixError .. "--- Unknown error detected ( " .. err .. " ): " .. rText)
+				print(_PrefixError .. "--- Erreur inconnue détectée ( " .. err .. " ): " .. rText)
 				print(_PrefixError .. "------------------------------------------------------------------------------------------------")
-				log('== Unknown error, (' .. err .. '): ' .. rText .. ' ==')
+				log('== Erreur inconnue, (' .. err .. '): ' .. rText .. ' ==')
 			end
 		end, "PUT", "", {Authorization = "Basic " .. auth})
 	elseif settings.defaultSettings.defaultDatabase == '1' and settings.defaultSettings.enableCustomData ~= '1' then
@@ -92,8 +92,8 @@ local function getUUID(amount, cb)
 
 	requestDB('GET', '_uuids?count=' .. amount, nil, nil, function(err, rText, headers)
 		if err ~= 200 then
-			log('== Could not retrieve UUID from CouchDB, error('.. err .. '): '.. rText .. ' ==')
-			print(_PrefixError .. ' Error occurred while performing database request: could not retrieve UUID, error code: ' .. err .. ", server returned: " .. rText)
+			log('== Impossible de récupérer l\'UUID de CouchDB, erreur('.. err .. '): '.. rText .. ' ==')
+			print(_PrefixError .. ' Une erreur s\'est produite lors de la consultation de la base de données : Impossible de récupérer l\'UUID, code d\'erreur: ' .. err .. ", serveur renvoyé: " .. rText)
 		else
 			if cb then
 				if amount > 1 then
@@ -111,8 +111,8 @@ local function getDocument(uuid, callback)
 		local doc =  json.decode(rText)
 
 		if err ~= 200 then
-			log('== Could not retrieve document from CouchDB, error('.. err .. '): '.. rText .. ' ==')
-			print(_PrefixError .. 'Error occurred while performing database request: could not retrieve document, error code: ' .. err .. ", server returned: " .. rText)
+			log('== Impossible de récupérer le document dans la base de données CouchDB, erreur('.. err .. '): '.. rText .. ' ==')
+			print(_PrefixError .. 'Une erreur s\'est produite lors de la consultation de la base de données : Impossible de récupérer le document, code d\'erreur: ' .. err .. ", serveur renvoyé: " .. rText)
 		else
 			if callback then
 				if doc then callback(doc) else callback(false) end

@@ -146,7 +146,7 @@ AddEventHandler('NB:virerplayer', function(target)
 
 	local sourceXPlayer = ESX.GetPlayerFromId(_source)
 	local targetXPlayer = ESX.GetPlayerFromId(target)
-	local job = "unemployed"
+	local job = "chomeurs"
 	local grade = "0"
 
 	if(sourceXPlayer.job.name == targetXPlayer.job.name)then

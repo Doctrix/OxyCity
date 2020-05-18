@@ -162,7 +162,7 @@ ESX.RegisterUsableItem('cigarett', function(source)
 			xPlayer.removeInventoryItem('cigarett', 1)
 			TriggerClientEvent('esx_cigarett:startSmoke', source)
 		else
-			TriggerClientEvent('esx:showNotification', source, ('Não tens ~r~isqueiro'))
+			TriggerClientEvent('esx:showNotification', source, ('Vous n\'avez pas d\'attaquant'))
 		end
 end)
 
@@ -176,14 +176,14 @@ TriggerEvent('es:addGroupCommand', 'heal', 'admin', function(source, args, user)
 			
 			-- is the number a valid player?
 			if GetPlayerName(target) then
-				print('esx_basicneeds: ' .. GetPlayerName(source) .. ' is healing a player!')
+				print('esx_basicneeds: ' .. GetPlayerName(source) .. ' est la guérison d'un joueur!')
 				TriggerClientEvent('esx_basicneeds:healPlayer', target)
-				TriggerClientEvent('chatMessage', target, "HEAL", {223, 66, 244}, "You have been healed!")
+				TriggerClientEvent('chatMessage', target, "HEAL", {223, 66, 244}, "Vous avez été guéri!")
 			else
-				TriggerClientEvent('chatMessage', source, "HEAL", {255, 0, 0}, "Player not found!")
+				TriggerClientEvent('chatMessage', source, "HEAL", {255, 0, 0}, "Joueur non trouvé!")
 			end
 		else
-			TriggerClientEvent('chatMessage', source, "HEAL", {255, 0, 0}, "Incorrect syntax! You must provide a valid player ID")
+			TriggerClientEvent('chatMessage', source, "HEAL", {255, 0, 0}, "Syntaxe incorrecte ! Vous devez fournir un identifiant de joueur valide")
 		end
 	else
 		-- heal source
@@ -192,4 +192,4 @@ TriggerEvent('es:addGroupCommand', 'heal', 'admin', function(source, args, user)
 	end
 end, function(source, args, user)
 	TriggerClientEvent('chatMessage', source, "HEAL", {255, 0, 0}, "Insufficient Permissions.")
-end, {help = "Heal a player, or yourself - restores thirst, hunger and health."})
+end, {help = "Guérissez un joueur, ou vous-même - restaurez la soif, la faim et la santé."})

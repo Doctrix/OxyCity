@@ -65,8 +65,8 @@ function OpenShopMenu(zone)
 			title    = _U('shop_confirm', data.current.value, data.current.label_real, ESX.Math.GroupDigits(data.current.price * data.current.value)),
 			align    = 'bottom-right',
 			elements = {
-				{label = _U('no'),  value = 'no'},
-				{label = _U('yes'), value = 'yes'}
+				{label = _U('non'),  value = 'no'},
+				{label = _U('oui'), value = 'yes'}
 			}
 		}, function(data2, menu2)
 			if data2.current.value == 'yes' then

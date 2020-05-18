@@ -100,7 +100,7 @@ AddEventHandler("es:setPlayerData", function(user, k, v, cb)
 
 				db.updateUser(Users[user].get('identifier'), {[k] = v}, function(d)
 					if d == true then
-						cb("Player data edited", true)
+						cb("Données du joueur éditées", true)
 					else
 						cb(d, false)
 					end
@@ -111,17 +111,17 @@ AddEventHandler("es:setPlayerData", function(user, k, v, cb)
 				Users[user].set(k, v)
 			end
 		else
-			cb("Column does not exist!", false)
+			cb("La colonne n'existe pas!", false)
 		end
 	else
-		cb("User could not be found!", false)
+		cb("L'utilisateur n'a pas pu être trouvé!", false)
 	end
 end)
 
 -- Same as above just easier was we know the ID already now.
 AddEventHandler("es:setPlayerDataId", function(user, k, v, cb)
 	db.updateUser(user, {[k] = v}, function(d)
-		cb("Player data edited.", true)
+		cb("Données du joueur éditées.", true)
 	end)
 end)
 

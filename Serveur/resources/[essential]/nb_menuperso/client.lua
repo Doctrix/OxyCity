@@ -11,9 +11,9 @@ local Keys = {
 }
 
 ESX = nil
-local GUI                       = {}
-GUI.Time                        = 0
-local PlayerData              = {}
+local GUI           = {}
+GUI.Time            = 0
+local PlayerData	= {}
 
 RegisterNetEvent('esx:playerLoaded')
 AddEventHandler('esx:playerLoaded', function(xPlayer)
